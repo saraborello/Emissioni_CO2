@@ -10,7 +10,7 @@ The objective of this study is to develop a robust linear model, essential for i
    - [Target Variable ](#Target-Variable)
    - [Selection of Variables](#Selection-of-Variables)
    - [Missing Data](#Missing-Data)
-   - [Elimination of Problematic Observations](Elimination-of-Problematic-Observations)
+   - [Elimination of Problematic Observations](#Elimination-of-Problematic-Observations)
    - [Optimal Grouping and Transformations of X](#Optimal-Grouping-and-Transformations-of-X)
 
 
@@ -105,3 +105,48 @@ Table 3: Energy Class
 </div>
 
 The variable `MOTIVAZIONE_APE` had 14 levels, so the optimal grouping methodology was adopted to aggregate similar categories based on their similarity in the mean with respect to the target variable, reducing unnecessary levels. Following this process, 6 clusters were identified, visible in the dendrogram shown in Figure 7 and detailed in the Table.
+
+<div align="center">
+  
+  <img width="666" alt="Optimal Grouping" src="https://github.com/user-attachments/assets/ba688f8f-1be0-4534-a6df-cfc38dd7e4fa">
+
+  Figure 7: Optimal Grouping
+  
+</div>
+
+
+<div align="center">
+   
+| Group     | Description                             | Count |
+|-----------|-----------------------------------------|-----------|
+| 1         | New constructions                       | 1,017     |
+| 2         | Major structural interventions          | 487       |
+| 3         | Energy renovation                       | 950       |
+| 4         | Other                                   | 2,219     |
+| 5         | Transfer for consideration              | 6,976     |
+| 6         | Lease agreement                         | 5,195     |
+
+Table 4: Reasons for Opening the APE Procedure
+
+</div>
+
+
+Figure 8 shows that the optimal grouping was effectively carried out and that there is a noticeable difference between the groups with respect to the dependent variable.
+
+<div align="center">
+  
+  <img width="635" alt="Covariates after grouping" src="https://github.com/user-attachments/assets/ac7928d7-5721-40f1-9e02-42a0138705d9">
+
+  Figure 8: Covariates after grouping
+  
+</div>
+
+After addressing the missing values, correcting typographical errors, and recoding the categorical variables to have a manageable number of levels, the pre-processing phase of the dataset is concluded. This conclusion allows for the first estimation of the model to proceed. Specifically, Figure 9 clearly illustrates the distribution of continuous covariates in relation to the target, offering a more intelligible representation compared to the one presented in the previous section. It is observed that some non-linear relationships exist between the covariates and the dependent variable, which could present challenges related to the assumption of linearity within the model.
+
+<div align="center">
+  
+<img width="654" alt="Covariates after pre-processing" src="https://github.com/user-attachments/assets/80524499-c8be-42b7-ba6e-6c38373d6ed6">
+
+  Figure 9: Covariates after pre-processing
+  
+</div>
